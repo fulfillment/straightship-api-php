@@ -1,0 +1,45 @@
+# Order
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**packages** | [**Fulfillment\StraightShip\Client\Model\Package[]**](Package.md) | Packages | [optional] 
+**rates** | [**Fulfillment\StraightShip\Client\Model\CarrierOrderRate[]**](CarrierOrderRate.md) | Estimate rates | [optional] 
+**batch_number** | **string** | Optional batch number. If batch already exists, order is added to existing batch | [optional] 
+**order_import_source** | **string** | Optional import source | [optional] 
+**package_description** | **string** |  | [optional] 
+**manifest_id** | **string** | A manifest ID associated with an order. This is typically used for end-of-day  processing, defining a truckload (one manifest per truck), or for each pickup (one manifest per pickup).                Note:  - This field is optional. The system will automatically assign a value if left empty.  - Avoid populating this field with an order number. Doing so can lead to a one-to-one     mapping of a manifest to an order, which can cause performance issues.  - This ID is intended for grouping multiple orders into batches (e.g., an end-of-day batch,     a truckload, or a pickup), not for individual order tracking. | [optional] 
+**batch_id** | **int** | Batch id | [optional] 
+**client_code** | **string** | Client code for order | [optional] 
+**transaction_number** | **string** | Mandatory unique shipment number | [optional] 
+**customer_order** | **string** | Optional customer reference 1 | [optional] 
+**customer_po** | **string** | Optional customer reference 2 | [optional] 
+**customer_number** | **string** | Optional customer reference 3 | [optional] 
+**terms** | **string** | Optional order terms. This is free-form reference field for packing slips only. Do not use it to specify freight payment terms. To specify who pays for label, use field named &#x60;FreightPaymentTerms&#x60; | [optional] 
+**status** | **string** | Order processing status, read/only | [optional] 
+**processing_errors** | **string** | Processing errors | [optional] 
+**instruction** | **string** | Optional order delivery instructions | [optional] 
+**currency_code** | **string** | Default order currency code for all input price fields (such as unit price, COD, insurance. etc.) | [optional] 
+**insurance** | [**Fulfillment\StraightShip\Client\Model\Insurance**](Insurance.md) |  | [optional] 
+**custom_fields** | [**Fulfillment\StraightShip\Client\Model\CustomField[]**](CustomField.md) | Custom fields to pass with order | [optional] 
+**dangerous_goods_header** | [**Fulfillment\StraightShip\Client\Model\DangerousGoodsHeader**](DangerousGoodsHeader.md) |  | [optional] 
+**id** | **int** |  | [optional] 
+**processed_on** | **string** | Timestamp when label generated | [optional] 
+**has_errors** | **bool** | Has errors | [optional] 
+**airway_bill_number** | **string** | Air waybill number | [optional] 
+**elapsed_carrier_api_time_process** | **double** | Elapsed label API time (without rates) | [optional] 
+**elapsed_carrier_api_time_void_previous** | **double** | Elapsed void previous order API time | [optional] 
+**freight_charge** | [**Fulfillment\StraightShip\Client\Model\PackageFreightCharge**](PackageFreightCharge.md) |  | [optional] 
+**ship_from_address** | [**Fulfillment\StraightShip\Client\Model\Address**](Address.md) |  | [optional] 
+**label_from_address** | [**Fulfillment\StraightShip\Client\Model\Address**](Address.md) |  | [optional] 
+**ship_to_address** | [**Fulfillment\StraightShip\Client\Model\ShipToAddress**](ShipToAddress.md) |  | [optional] 
+**bill_to_address** | [**Fulfillment\StraightShip\Client\Model\Address**](Address.md) |  | [optional] 
+**exporter_address** | [**Fulfillment\StraightShip\Client\Model\Address**](Address.md) |  | [optional] 
+**importer_address** | [**Fulfillment\StraightShip\Client\Model\Address**](Address.md) |  | [optional] 
+**routing** | [**Fulfillment\StraightShip\Client\Model\Routing**](Routing.md) |  | [optional] 
+**customs** | [**Fulfillment\StraightShip\Client\Model\Customs**](Customs.md) |  | [optional] 
+**shipping_options** | [**Fulfillment\StraightShip\Client\Model\ShippingOptions**](ShippingOptions.md) |  | [optional] 
+**ltl_options** | [**Fulfillment\StraightShip\Client\Model\LTLOptions**](LTLOptions.md) |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
